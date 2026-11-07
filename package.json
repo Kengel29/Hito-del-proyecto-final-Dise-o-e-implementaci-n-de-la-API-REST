@@ -1,0 +1,9 @@
+{
+  "name": "cosecha-ruta",
+  "version": "1.0.0",
+  "description": "API REST y sitio web de Cosecha Ruta - Región Valdesia",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.19.2" }
+}

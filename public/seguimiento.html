@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seguimiento de la ruta | Cosecha Ruta</title>
+<meta name="description" content="Plataforma digital para seguir la Ruta de la Cosecha de la región Valdesia: San Cristóbal, Peravia y San José de Ocoa.">
+<script>try{var t=localStorage.getItem('tema')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido principal</a>
+<header id="encabezado"><div class="fila">
+  <a href="index.html" class="marca"><img src="imagenes/logo.png" alt="Cosecha Ruta, rastreando la cosecha. Logo con una gota verde, un camino azul, una montaña y un tomate" width="119" height="150"></a>
+  <div class="acciones"><span class="chip" id="rol">👁️ Visitante</span><button class="boton boton-sec mini" id="btn-rol" type="button">🔑 Acceso administrador</button></div>
+</div></header>
+<nav class="menu" aria-label="Navegación principal"><ul>
+    <li><a href="index.html">🏠 Inicio</a></li><li><a href="eventos.html">🎉 Eventos</a></li><li><a href="seguimiento.html" aria-current="page">🗺️ Seguimiento</a></li><li><a href="puntos.html">🌾 Puntos de cosecha</a></li><li><a href="calendario.html">📅 Calendario</a></li></ul></nav>
+<div id="banner" class="solo-admin">🛠️ Modo administrador: puedes agregar, editar y eliminar. Los visitantes solo ven la información. <button class="boton" data-salir type="button">Cerrar sesión</button></div>
+
+<div class="carretera" aria-label="Camión en la carretera">
+  <div class="raya"></div>
+  <button class="vehiculo" type="button" data-vial aria-label="Ver el estado de las carreteras">
+    <span class="badge">🚚 Toca para ver el estado de las carreteras</span>
+    <svg width="90" height="42" viewBox="0 0 75 35" aria-hidden="true"><rect x="2" y="5" width="45" height="20" rx="3" fill="#1F5FA8" stroke="#fff" stroke-width="1.5"/><circle cx="14" cy="15" r="4" fill="#E26B4F"/><circle cx="26" cy="15" r="4" fill="#E26B4F"/><circle cx="38" cy="15" r="4" fill="#9BC53D"/><path d="M47 12h11l10 8v5H47z" fill="#4A6320" stroke="#fff" stroke-width="1.5"/><path d="M51 14h7l6 5H51z" fill="#EFEBE0"/>
+    <g class="rueda"><circle cx="12" cy="27" r="5" fill="#333" stroke="#fff"/><path d="M12 23v8" stroke="#fff"/></g><g class="rueda"><circle cx="36" cy="27" r="5" fill="#333" stroke="#fff"/><path d="M36 23v8" stroke="#fff"/></g><g class="rueda"><circle cx="58" cy="27" r="5" fill="#333" stroke="#fff"/><path d="M58 23v8" stroke="#fff"/></g></svg>
+  </button>
+</div>
+
+<main id="contenido">
+<div class="alt mapa" id="seguimiento"><section class="bq" aria-labelledby="t-s"><div class="cab"><div class="card" style="padding:1rem 1.5rem .2rem"><h1 id="t-s" style="font-size:2rem">Seguimiento de la ruta</h1><p>Qué se cultiva en cada zona, cómo llegar y cómo está la carretera.</p></div></div><div class="grid" id="zonas"></div></section></div>
+</main>
+
+<section class="choque" aria-hidden="true">
+  <p class="tit">¡Cosecha Ruta!</p>
+  <img class="lg lg-i" src="imagenes/logo.png" alt="" width="60" height="76"><img class="lg lg-d" src="imagenes/logo.png" alt="" width="60" height="76">
+  <span class="anillo"></span>
+  <span class="sp" style="--x:-130px;--y:-70px"></span><span class="sp" style="--x:130px;--y:-70px"></span><span class="sp" style="--x:-80px;--y:-100px"></span><span class="sp" style="--x:80px;--y:-100px"></span><span class="sp" style="--x:0;--y:-110px"></span><span class="sp" style="--x:-170px;--y:-20px"></span><span class="sp" style="--x:170px;--y:-20px"></span><span class="sp" style="--x:-50px;--y:-60px"></span><span class="sp" style="--x:50px;--y:-60px"></span><span class="sp" style="--x:-110px;--y:10px"></span><span class="sp" style="--x:110px;--y:10px"></span>
+</section>
+<footer>
+  <p style="font-weight:700">Cosecha Ruta · Región Valdesia, República Dominicana</p><p style="font-size:.9rem">Proyecto Integrador - API REST Node.js &amp; Express</p>
+  <div class="su"><div>Kendri Tatis<br><small>Mat: 100263465</small></div><div>Rodolfo Starlyn Espinal Hilario<br><small>Mat: 100100513</small></div><div>Aneudy de la cruz<br><small>Mat: 100465614</small></div><div>César Adrián Aybar Montes De Oca<br><small>Mat: 100692670</small></div></div>
+  <p><a href="#contenido">Volver arriba</a></p>
+</footer>
+<dialog id="dlg" aria-labelledby="dlg-t"><div id="dlg-c"></div></dialog>
+<button id="tema" type="button"></button><div id="toast" role="status"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
